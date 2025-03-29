@@ -1407,6 +1407,9 @@ else
 	MainSector:CreateToggle("Team Check", HyperEscape.AimBot.TeamCheck, function(ATC) HyperEscape.AimBot.TeamCheck = ATC; end);
 	MainSector:CreateToggle("Wall Check", HyperEscape.AimBot.WallCheck, function(AWC) HyperEscape.AimBot.WallCheck = AWC ;end);
 	MainSector:CreateDropDown("Hit Scan", {"Head", "HumanoidRootPart"}, HyperEscape.AimBot.AimPart, false, function(AHS) HyperEscape.AimBot.AimPart = AHS; end);
+	if not IsArsenal then
+		
+	end
 
 	local FovSecor = AimBotTab:CreateSector("FOV Circle", "Left");
 	FovSecor:CreateToggle("Show Fov", HyperEscape.AimBot.ShowFov, function(AFE) HyperEscape.AimBot.ShowFov = AFE; end);
