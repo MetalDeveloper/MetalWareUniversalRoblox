@@ -112,7 +112,7 @@ else
 			Border = Color3.fromRGB(0, 0, 0);
 
 			Toggle = Color3.fromRGB(62, 62, 62);
-			Selected = Color3.fromRGB(85, 0, 255);
+			Selected = Color3.fromRGB(48, 106, 202);
 
 			Font = Enum.Font.Ubuntu;
 			TextSize = 14;
@@ -122,7 +122,7 @@ else
 		function library:CreateWindow(Keybind, Name)
 			local window = { };
 			window.keybind = Keybind or Enum.KeyCode.RightShift;
-			window.name = Name or "DeleteMob";
+			window.name = Name or "MetalWare";
 
 			window.ScreenGui = Instance.new("ScreenGui");
 			window.ScreenGui.Parent = (CoreGui or StarterGUI);
@@ -176,7 +176,7 @@ else
 			window.TabsHolder = Instance.new("Frame", window.Main);
 			window.TabsHolder.Position = UDim2.fromScale(0.031, 0.107);
 			window.TabsHolder.Size =  UDim2.fromOffset(100, 389);
-			window.TabsHolder.BackgroundTransparency = 1;
+			window.TabsHolder.BackgroundTransparency = 0.9;
 
 			window.UIListLayout = Instance.new("UIListLayout", window.TabsHolder);
 			window.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center;
@@ -1419,7 +1419,7 @@ else
 	OtherSector:CreateSlider("Smoothing", 3, HyperEscape.AimBot.Smoothing * 100, 50, 1, function(AS) HyperEscape.AimBot.Smoothing = AS / 100; end);
 	OtherSector:CreateKeyBind("Key Bind", HyperEscape.AimBot.Keybind, function(AK) HyperEscape.AimBot.Keybind = AK; end);
 	OtherSector:CreateToggle("Use Mouse", HyperEscape.AimBot.UseMouse, function(AUM) HyperEscape.AimBot.UseMouse = AUM; end);
-	OtherSector:CreateDropDown("Mouse Bind", {"MouseButton1", "MouseButton2"}, HyperEscape.AimBot.MouseBind, false, function(AMB) HyperEscape.AimBot.MouseBind = AMB; end);
+	OtherSector:CreateDropDown("Mouse Bind", {"MouseButton1", "MouseButton2", }, HyperEscape.AimBot.MouseBind, false, function(AMB) HyperEscape.AimBot.MouseBind = AMB; end);
 
 	local ESPTab = Window:CreateTab("ESP");
 	local EnableSector = ESPTab:CreateSector("ESP", "Left");
@@ -1437,7 +1437,7 @@ else
 	end
 
 	local ESPSettingsSecor = ESPTab:CreateSector("Settings", "Right");
-	ESPSettingsSecor:CreateSlider("Max Distance", 0, HyperEscape.esp.MaxDistance, 4000, 1, function(EMD) HyperEscape.esp.MaxDistance = EMD; end);
+	ESPSettingsSecor:CreateSlider("Max Distance", 0, HyperEscape.esp.MaxDistance, 8000, 1, function(EMD) HyperEscape.esp.MaxDistance = EMD; end);
 	ESPSettingsSecor:CreateToggle("Outlines", HyperEscape.esp.Box.Outline, function(ESO) HyperEscape.esp.Box.Outline = ESO; HyperEscape.esp.Tracer.Outline = ESO; end);
 	ESPSettingsSecor:CreateColorPicker("Outline Color", HyperEscape.esp.Box.OutlineColor, function(EOC) HyperEscape.esp.Box.OutlineColor = EOC; HyperEscape.esp.Tracer.OutlineColor = EOC; end);
 	ESPSettingsSecor:CreateColorPicker("ESP Color", HyperEscape.esp.Box.Color, function(EEC) HyperEscape.esp.Box.Color = EEC; HyperEscape.esp.Tracer.Color = EEC; end);
