@@ -106,18 +106,18 @@ else
 		local httpservice = game:GetService("HttpService");
 
 		library.theme = {
-			BackGround = Color3.fromRGB(30, 30, 30);
-			BackGround2 = Color3.fromRGB(38, 38, 38);
-
-			Border = Color3.fromRGB(0, 0, 0);
-
-			Toggle = Color3.fromRGB(62, 62, 62);
-			Selected = Color3.fromRGB(48, 106, 202);
-
+			BackGround = Color3.fromRGB(20, 25, 40);
+			BackGround2 = Color3.fromRGB(28, 35, 50);
+		
+			Border = Color3.fromRGB(10, 15, 25);
+		
+			Toggle = Color3.fromRGB(45, 60, 90);
+			Selected = Color3.fromRGB(68, 138, 255);
+		
 			Font = Enum.Font.Ubuntu;
 			TextSize = 14;
-			TextColor = Color3.fromRGB(255, 255, 255);
-		};
+			TextColor = Color3.fromRGB(220, 230, 255);
+		};		
 
 		function library:CreateWindow(Keybind, Name)
 			local window = { };
@@ -1396,9 +1396,9 @@ else
 		IsArsenal = true;
 	end
 
-	local DeleteMobLib = library();
+	local MetalWareLib = library();
 
-	local Window = DeleteMobLib:CreateWindow(HyperEscape.GUI.GUIToggleKey, "DeleteMob");
+	local Window = MetalWareLib:CreateWindow(HyperEscape.GUI.GUIToggleKey, "MetalWare");
 	local UIToggle = Window:CreateToggleButton()
 
 	local AimBotTab = Window:CreateTab("Aim Bot");
@@ -1450,8 +1450,7 @@ else
 
 	local SettingsTab = Window:CreateTab("Settings");
 	local SettingsInfoSector = SettingsTab:CreateSector("Info", "Left");
-	SettingsInfoSector:CreateCoppyText("Made By m1ckgordon");
-	SettingsInfoSector:CreateCoppyText("https://discord.gg/jNRKdtH3 - Click Me");
+	SettingsInfoSector:CreateCoppyText("Made By MetalDev");
 
 	SettingsTab:CreateConfig("Right");
 
